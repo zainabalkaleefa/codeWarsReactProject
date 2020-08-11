@@ -1,5 +1,6 @@
 import React,{ useState, useEffect } from 'react';
 import axios from 'axios';
+
 import './App.css';
 
 function App() {
@@ -7,12 +8,14 @@ function App() {
    ////////////////////// Get tasks  //////////////////////
    useEffect(() => {
     axios
-      .get('https://www.codewars.com/api/v1/users/zainabalkaleefa')
+      // .get('https://api.github.com/users/zainabalkaleefa')
+      .get("/api/v1/users/zainabalkaleefa/?access_key=i8J6XHhoBAdVH44bJ3-p")
       .then(//request is successful
         response => {
-          console.log(response.honor);
           const honorNumber = response.data.honor;
+          console.log(honorNumber);
           setdata(honorNumber);
+
         })
       .catch(// an error
         (error) => {
@@ -20,13 +23,14 @@ function App() {
         }
       )
       .finally(() => console.log("I am done"))
-  }, []);
+  }, [setdata]);
 
   return (
     <div className="background">
-     {data}
+     <h1>honor : {data}</h1>
     </div>
   );
 }
 
 export default App;
+
