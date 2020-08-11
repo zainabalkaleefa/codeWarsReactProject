@@ -8,7 +8,7 @@ function App() {
    ////////////////////// Get tasks  //////////////////////
    useEffect(() => {
     axios
-      // .get('https://api.github.com/users/zainabalkaleefa')
+      // .get('https://api.github.com/users/zainabalkaleefa') // github api
       .get("/api/v1/users/zainabalkaleefa/?access_key=i8J6XHhoBAdVH44bJ3-p")
       .then(//request is successful
         response => {
