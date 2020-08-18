@@ -2,3 +2,20 @@
   background-color: rgb(48, 47, 47);
 }
 
+.cardPosition{
+  margin-top: 250px;
+}
+
+.img{
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif; */
+  height: 100%;
+  width: 100%;
+
+}

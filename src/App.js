@@ -6,6 +6,8 @@ import './App.css';
 function App() {
   const [data, setdata] = useState([]);
   const[name, setName]=useState([]);
+  const[rank, setRank]=useState([]);
+  const[skill, setSkill]=useState([]);
    ////////////////////// Get tasks  //////////////////////
    useEffect(() => {
     axios
@@ -14,10 +16,14 @@ function App() {
       .then(//request is successful
         response => {
           const honorNumber = response.data.honor;
-          const Name = response.data.name
+          const Name = response.data.name;
+          const Rank = response.data.ranks.overall.name;
+          const Skill = response.data.skills;
           console.log(honorNumber);
           setdata(honorNumber);
-          setName(Name)
+          setName(Name);
+          setRank(Rank);
+          setSkill(Skill);
 
         })
       .catch(// an error
@@ -31,11 +37,14 @@ function App() {
   return (
 
 <div class="card bg-dark text-white">
-  <img src="https://pathrise-website-guide-wp.s3.us-west-1.amazonaws.com/guides/wp-content/uploads/2019/06/10173017/codewars-logo-1.png" class="card-img" alt="..."/>
-  <div class="card-img-overlay">
+  <img src="https://pathrise-website-guide-wp.s3.us-west-1.amazonaws.com/guides/wp-content/uploads/2019/06/10173017/codewars-logo-1.png" className="card-img img" alt="..." style={{height: '100vh'}}/>
+  <div class="card-img-overlay cardPosition">
     <h2 class="card-title" align ="center">zainabalkaleefa</h2>
-    <h3 class="card-text" align="center">honor:{data}</h3>
-    <h3 class="card-text" align="center">name:{name}</h3>
+    <h3 class="card-text" align="center">Honor:{data}</h3>
+    <h3 class="card-text" align="center">Name:{name}</h3>
+    <h3 class="card-text" align="center">Rank:{rank}</h3>
+    <h3 class="card-text" align="center">Laguages:{skill}</h3>
+   
    
   </div>
 </div>
