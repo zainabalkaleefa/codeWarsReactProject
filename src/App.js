@@ -5,6 +5,7 @@ import './App.css';
 
 function App() {
   const [data, setdata] = useState([]);
+  const[name, setName]=useState([]);
    ////////////////////// Get tasks  //////////////////////
    useEffect(() => {
     axios
@@ -13,8 +14,10 @@ function App() {
       .then(//request is successful
         response => {
           const honorNumber = response.data.honor;
+          const Name = response.data.name
           console.log(honorNumber);
           setdata(honorNumber);
+          setName(Name)
 
         })
       .catch(// an error
@@ -32,7 +35,7 @@ function App() {
   <div class="card-img-overlay">
     <h2 class="card-title" align ="center">zainabalkaleefa</h2>
     <h3 class="card-text" align="center">honor:{data}</h3>
-    <h3 class="card-text" align="center">honor:{data}</h3>
+    <h3 class="card-text" align="center">name:{name}</h3>
    
   </div>
 </div>
