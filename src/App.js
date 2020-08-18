@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from 'react';
 import axios from 'axios';
-
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
 function App() {
@@ -26,9 +26,16 @@ function App() {
   }, [setdata]);
 
   return (
-    <div className="background">
-     <h1>honor : {data}</h1>
-    </div>
+
+<div class="card bg-dark text-white">
+  <img src="https://pathrise-website-guide-wp.s3.us-west-1.amazonaws.com/guides/wp-content/uploads/2019/06/10173017/codewars-logo-1.png" class="card-img" alt="..."/>
+  <div class="card-img-overlay">
+    <h2 class="card-title" align ="center">zainabalkaleefa</h2>
+    <h3 class="card-text" align="center">honor:{data}</h3>
+    <h3 class="card-text" align="center">honor:{data}</h3>
+   
+  </div>
+</div>
   );
 }
 
