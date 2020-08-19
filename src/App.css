@@ -17,5 +17,14 @@
   font-family: "Fira Sans", sans-serif; */
   height: 100%;
   width: 100%;
+}
 
+.inputField{
+    margin-left: 35%;
+    border: 1px dotted black;
+    margin-top:-100px;
+}
+.addField{
+  margin-left: 45%;
+  margin-top: 10px;
 }
