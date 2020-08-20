@@ -50,7 +50,7 @@ function App() {
           <input
             type="text"
             className="form-control  inputField"
-            name="text_name" placeholder=" CodeWars Username"
+            name="text_name" placeholder=" &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; CodeWars Username"
             style={{ width: "30%", height: "10%" , borderRadius:20}}
             // aria-describedby="inputGroup-sizing-Default"
             // onChange={textChange}

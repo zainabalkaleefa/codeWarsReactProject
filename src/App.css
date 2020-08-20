@@ -20,6 +20,10 @@
 }
 
 .inputField{
+  background: url('https://api.iconify.design/simple-icons:codewars.svg');
+  background-repeat: no-repeat;
+  background-position: 3% 14px;
+  background-size: 1cm;
     margin-left: 35%;
     border: 1px dotted black;
     margin-top:-100px;
