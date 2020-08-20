@@ -50,29 +50,29 @@ function App() {
           <input
             type="text"
             className="form-control  inputField"
-            name="text_name" placeholder=" Add a new Task"
-            style={{ width: "30%" }}
+            name="text_name" placeholder=" CodeWars Username"
+            style={{ width: "30%", height: "10%" , borderRadius:20}}
             // aria-describedby="inputGroup-sizing-Default"
             // onChange={textChange}
             // value={text} 
             />
-        
+       
           <button 
             type="button"
             className="btn btn-danger addField"
             align="center"
             // onClick={addTaskButton}
-            style={{ width: "10%" }}
-          >  Submit  </button>
+            style={{ width: "10%" , height: "8%", borderRadius:100}}
+          > </button>
      
      
     {/* <h1 class="card-title" align ="center">{userName}</h1>  */}
     <br></br><br></br>
-    <h3 class="card-text" align="center">Name:{name}</h3>
-    <h3 class="card-text" align="center">Honor:{data}</h3>
-    <h3 class="card-text" align="center">Rank:{rank}</h3>
-    <h3 class="card-text" align="center">Laguages:{skill}</h3>
-    <h3 class="card-text" align="center">Completed Challenges:{challenge}</h3>
+    <h3 class="card-text text firstText" align="left"><b>Name:</b>  &nbsp;&nbsp;{ name}</h3> 
+    <h3 class="card-text text" align="left"><b>Honor:</b>  &nbsp;&nbsp;{data}</h3>
+    <h3 class="card-text text" align="left"><b>Rank:</b>  &nbsp;&nbsp;{rank}</h3>
+    <h3 class="card-text text" align="left"><b>Laguages:</b>  &nbsp;&nbsp;{skill}</h3>
+    <h3 class="card-text text" align="left"><b>Completed Challenges:</b>  &nbsp;&nbsp;{challenge}</h3>
    
    
   </div>
