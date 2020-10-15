@@ -10,12 +10,25 @@ function App() {
   const[rank, setRank]=useState([]);
   const[skill, setSkill]=useState([]);
   const[challenge, setChallenge]=useState([]);
+
+
+
+ 
+    const [text, setText] = useState("");
+    function textChange(event) {
+      setText(event.target.value);
+    }
+    function addUser(text) {
+      const newUser = { text: text}
+      
+      }
+  
    ////////////////////// Get tasks  //////////////////////
    useEffect(() => {
     axios
       // .get('https://api.github.com/users/zainabalkaleefa') // github api
       // .get("/api/v1/users/zainabalkaleefa/?access_key=i8J6XHhoBAdVH44bJ3-p")
-      .get("/api/v1/users/zainabalkaleefa")
+      .get('/api/v1/users/zainabalkaleefa')
       .then(//request is successful
         response => {
           const honorNumber = response.data.honor;
@@ -53,15 +66,15 @@ function App() {
             name="text_name" placeholder=" &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; CodeWars Username"
             style={{ width: "30%", height: "10%" , borderRadius:20}}
             // aria-describedby="inputGroup-sizing-Default"
-            // onChange={textChange}
-            // value={text} 
+            onChange={textChange}
+            value={text} 
             />
        
           <button 
             type="button"
             className="btn btn-danger addField"
             align="center"
-            // onClick={addTaskButton}
+            onClick={addUser}
             style={{ width: "10%" , height: "8%", borderRadius:100}}
           > </button>
      
